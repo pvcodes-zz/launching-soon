@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 425px) {
+  main {
+    #inputDiv {
+      div {
+        #errorMsg {
+          left: 5rem;
+          bottom: -7px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #inputDiv {
+    display: flex;
+    justify-content: center;
+
+    #btn {
+      margin-left: 1rem;
+      width: 10rem;
+    }
+  }
+
+  #socialIcons {
+    div {
+      &:hover {
+        background: hsl(228, 45%, 44%);
+
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+main {
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+
+  #logo {
+    width: 4rem;
+    padding: 4rem 0 2.1rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+
+    span {
+      color: black;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    padding: 1rem 0;
+    color: hsl(209, 33%, 12%);
+    font-weight: 300;
+  }
+
+  #inputDiv {
+    div {
+      position: relative;
+      #errorMsg {
+        position: absolute;
+        // top: 3.75rem;
+        left: 1rem;
+        // left: 37rem;
+      }
+    }
+    input,
+    button {
+      width: 20rem;
+      padding: 1rem 2rem;
+      border-radius: 30rem;
+      border: 1px solid hsl(223, 100%, 88%);
+      outline: none;
+      margin: 0.5rem 0;
+    }
+
+    button {
+      background: hsl(223, 87%, 63%);
+      color: white;
+      font-weight: 700;
+      padding: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s linear;
+    }
+
+    #errorMsg {
+      padding: 0;
+      font-size: 0.8rem;
+      color: hsl(0, 0%, 59%);
+    }
+  }
+}
+
+#dashboardImg {
+  width: 40%;
+  padding: 3rem 0;
+  min-width: 20rem;
+}
+
+#socialIcons {
+  display: flex;
+  justify-content: center;
+
+  div {
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 50%;
+    margin: 1rem;
+    transition: background 0.6s linear;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      color: hsl(228, 45%, 44%);
+      transition: color 0.3s linear;
+    }
+  }
+}
+
+#ccPara {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 320px) {
+  #inputDiv {
+    #emailInput,
+    #btn {
+      width: 18rem;
+    }
+  }
+}
